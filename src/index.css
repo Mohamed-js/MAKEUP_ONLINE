@@ -7,7 +7,46 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  margin-bottom: 3px;
+}
+
+.items {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 8px;
+  flex-basis: 20%;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: rgb(163, 163, 163) 5px 5px 15px;
+}
+
+.img-holder {
+  height: 110px;
+  width: 110px;
+  text-align: center;
+  margin: auto;
+}
+
+.img-holder img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.card-name {
+  min-height: 50px;
+  margin-bottom: 5px;
 }

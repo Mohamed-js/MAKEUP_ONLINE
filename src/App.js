@@ -1,25 +1,14 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMakeup } from './actions';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './containers/Home';
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchMakeup());
-  }, []);
-
-  const makeup = useSelector((state) => state.makeup);
-
-  console.log(makeup[0][0]);
-
   return (
     <div className="App">
-      <div className="items">
-        {makeup[0] &&
-          makeup[0].map((item) => {
-            return <h5>{item.name}</h5>;
-          })}
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
     </div>
   );
 }

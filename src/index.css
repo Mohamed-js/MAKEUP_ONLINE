@@ -18,6 +18,7 @@ p {
 
 .items {
   display: flex;
+  flex-wrap: wrap;
   max-width: 900px;
   margin: 50px auto;
   justify-content: space-between;

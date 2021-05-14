@@ -37,9 +37,6 @@ const Navbar = () => {
         <h2 className="menu-item" onClick={handleClick}>
           <Link to="/categories">CATEGORIES</Link>
         </h2>
-        <h2 className="menu-item" onClick={handleClick}>
-          <Link to="/about">ABOUT</Link>
-        </h2>
         <h4 className="menu-toggle" onClick={toggle}>
           <FontAwesomeIcon icon={faArrowUp} />
         </h4>

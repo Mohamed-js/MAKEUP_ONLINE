@@ -2,7 +2,7 @@ import React from 'react';
 const ProductShow = ({ product }) => {
   return (
     <div className="product-container">
-      <h2>{product.name}</h2>
+      <h2>{product.name.toUpperCase()}</h2>
       <div className="product-img-container">
         <img src={product.api_featured_image} alt="product.name" />
       </div>

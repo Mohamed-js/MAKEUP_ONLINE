@@ -7,6 +7,12 @@ import DotLoader from 'react-spinners/DotLoader';
 import CategoryFilter from '../components/CategoryFilter';
 import BrandFilter from '../components/BrandFilter';
 import ProductCard from '../components/ProductCard';
+import {
+  FilterBrands,
+  FilterCats,
+  getBrandOptions,
+  getCatOptions,
+} from '../Helpers';
 
 const Products = () => {
   const category = useParams(':category');
@@ -21,42 +27,15 @@ const Products = () => {
   const makeup = useSelector((state) => state.makeup.category);
   let makeupToFilter;
   let makeupToView;
-  if (filter !== 'All') {
-    makeupToFilter = makeup.filter((item) => item.category === filter);
-  } else {
-    makeupToFilter = makeup;
-  }
 
-  if (brand !== 'All') {
-    makeupToView = makeupToFilter.filter((item) => item.brand === brand);
-  } else {
-    makeupToView = makeupToFilter;
-  }
+  makeupToFilter = FilterCats(filter, makeup);
+  makeupToView = FilterBrands(brand, makeupToFilter);
+
   const handleBrand = (e) => {
     dispatch(CHANGE_BRAND(e.target.value));
   };
-  const handleChange = (e) => {
+  const handleCategory = (e) => {
     dispatch(CHANGE_FILTER(e.target.value));
-  };
-
-  const getCatOptions = (makeup) => {
-    if (makeup) {
-      const allOptions = [];
-      makeup.forEach((item) => allOptions.push(item.category));
-      const filtered = allOptions.filter(Boolean).sort();
-      const filterCatOptions = new Set(filtered);
-      return filterCatOptions;
-    }
-  };
-
-  const getBrandOptions = (makeup) => {
-    if (makeup) {
-      const allOptions = [];
-      makeup.forEach((item) => allOptions.push(item.brand));
-      const filtered = allOptions.filter(Boolean).sort();
-      const filterBrandOptions = new Set(filtered);
-      return filterBrandOptions;
-    }
   };
 
   const cats = getCatOptions(makeup);
@@ -72,7 +51,7 @@ const Products = () => {
 
       {cats && (
         <div className="filter flex">
-          <CategoryFilter handleChange={handleChange} options={cats} />
+          <CategoryFilter handleChange={handleCategory} options={cats} />
           <BrandFilter handleBrand={handleBrand} options={brands} />
         </div>
       )}

@@ -40,7 +40,7 @@ const Categories = () => {
   return (
     <div className="items categories">
       {categories.map((category) => (
-        <div className="card">
+        <div className="card" key={category.category}>
           <Link to={`category/${category.category}`}>
             <div className="product-img-container">
               <img src={category.img} alt={category.category} />

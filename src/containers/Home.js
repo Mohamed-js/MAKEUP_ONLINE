@@ -38,7 +38,7 @@ const Home = () => {
       <div className="items">
         {makeup.makeup &&
           makeup.makeup.map((item) => {
-            return <ProductCard item={item} />;
+            return <ProductCard key={item.id} item={item} />;
           })}
       </div>
     </>

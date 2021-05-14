@@ -13,6 +13,7 @@ const ProductShow = ({ product }) => {
         {product.product_colors.map((color) => {
           return (
             <span
+              key={color.hex_value}
               className="color"
               style={{
                 backgroundColor: color.hex_value,

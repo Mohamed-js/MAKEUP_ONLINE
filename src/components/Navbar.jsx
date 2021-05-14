@@ -25,7 +25,9 @@ const Navbar = () => {
         <div className="tab">
           <FontAwesomeIcon icon={faBars} onClick={toggle} />
         </div>
-        <div className="tab logo">Makeup Online</div>
+        <div className="tab logo">
+          <Link to="/">Makeup Online</Link>
+        </div>
         <div className="tab">
           <FontAwesomeIcon icon={faSearch} />
         </div>

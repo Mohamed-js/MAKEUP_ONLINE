@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Option from './Option';
+import PropTypes from 'prop-types';
 
 const BrandFilter = (props) => {
   const filter = useSelector((state) => state.filter.brand);
@@ -23,3 +24,13 @@ const BrandFilter = (props) => {
 };
 
 export default BrandFilter;
+
+BrandFilter.propTypes = {
+  options: PropTypes.array,
+  handleBrand: PropTypes.func,
+};
+
+BrandFilter.defaultProps = {
+  options: ['All'],
+  handleBrand: () => 0,
+};

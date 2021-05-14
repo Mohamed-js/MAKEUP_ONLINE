@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 const ProductShow = ({ product }) => {
   return (
     <div className="product-container">
@@ -26,3 +28,11 @@ const ProductShow = ({ product }) => {
 };
 
 export default ProductShow;
+
+ProductShow.propTypes = {
+  product: PropTypes.object,
+};
+
+ProductShow.defaultProps = {
+  product: {},
+};

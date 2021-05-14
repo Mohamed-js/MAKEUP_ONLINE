@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Option = ({ option }) => {
   return (
@@ -6,6 +7,14 @@ const Option = ({ option }) => {
       {option}
     </option>
   );
+};
+
+Option.propTypes = {
+  option: PropTypes.string,
+};
+
+Option.defaultProps = {
+  option: 'All',
 };
 
 export default Option;

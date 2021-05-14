@@ -7,12 +7,7 @@ import DotLoader from 'react-spinners/DotLoader';
 import CategoryFilter from '../components/CategoryFilter';
 import BrandFilter from '../components/BrandFilter';
 import ProductCard from '../components/ProductCard';
-import {
-  FilterBrands,
-  FilterCats,
-  getBrandOptions,
-  getCatOptions,
-} from '../Helpers';
+import { FilterBrands, FilterCats, getBrandOptions, getCatOptions } from '../Helpers';
 
 const Products = () => {
   const category = useParams(':category');

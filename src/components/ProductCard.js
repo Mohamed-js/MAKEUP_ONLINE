@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const ProductCard = ({ item }) => {
   return (
@@ -24,3 +25,11 @@ const ProductCard = ({ item }) => {
 };
 
 export default ProductCard;
+
+ProductCard.propTypes = {
+  item: PropTypes.object,
+};
+
+ProductCard.defaultProps = {
+  item: {},
+};

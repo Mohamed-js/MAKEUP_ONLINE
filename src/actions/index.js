@@ -58,3 +58,13 @@ export const fetchItemsByCategory = (category) => {
       });
   };
 };
+
+export const CHANGE_FILTER = (filter) => ({
+  type: 'CHANGE_FILTER',
+  category: filter,
+});
+
+export const CHANGE_BRAND = (filter) => ({
+  type: 'CHANGE_BRAND',
+  brand: filter,
+});

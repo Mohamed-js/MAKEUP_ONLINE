@@ -199,3 +199,20 @@ nav {
   text-align: center;
   padding: 10px;
 }
+
+.filter {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.filter-select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.filter-select select {
+  padding: 8px;
+  margin: 5px;
+  width: 100%;
+}

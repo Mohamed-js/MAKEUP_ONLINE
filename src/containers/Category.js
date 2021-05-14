@@ -31,13 +31,11 @@ const Products = () => {
   } else {
     makeupToView = makeupToFilter;
   }
-
-  const handleChange = (e) => {
-    dispatch(CHANGE_FILTER(e.target.value));
-  };
-
   const handleBrand = (e) => {
     dispatch(CHANGE_BRAND(e.target.value));
+  };
+  const handleChange = (e) => {
+    dispatch(CHANGE_FILTER(e.target.value));
   };
 
   const getCatOptions = (makeup) => {

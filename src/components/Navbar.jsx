@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link to="/">HOME</Link>
         </h2>
         <h2 className="menu-item" onClick={handleClick}>
-          <Link to="/brands">BRANDS</Link>
+          <Link to="/categories">CATEGORIES</Link>
         </h2>
         <h2 className="menu-item" onClick={handleClick}>
           <Link to="/about">ABOUT</Link>

@@ -1,47 +1,32 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { fetchMakeup } from '../actions';
-import Cover from '../components/Cover';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link, useParams } from 'react-router-dom';
+import { fetchItemsByCategory } from '../actions';
 
-const Home = () => {
+const Products = () => {
+  const category = useParams(':category');
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchMakeup());
+    dispatch(fetchItemsByCategory(category.category));
   }, []);
 
-  const makeup = useSelector((state) => state.makeup);
-
-  console.log(makeup.makeup);
+  const makeup = useSelector((state) => state.makeup.category);
 
   return (
     <>
-      <div>
-        <Cover />
-      </div>
-
-      <div className="categories-btn">
-        <Link to="/categories">
-          SHOW CATEGORIES
-          <span>
-            <FontAwesomeIcon icon={faArrowRight} />{' '}
-          </span>
-        </Link>
-      </div>
       <div className="top-products">
         <hr />
         <br />
         <h2>TOP PRODUCTS</h2>
       </div>
       <div className="items">
-        {makeup.makeup &&
-          makeup.makeup.map((item) => {
+        {makeup &&
+          makeup.map((item) => {
             return (
               <div className="card">
-                <Link to={`product/${item.id}`}>
+                <Link to={`/product/${item.id}`}>
                   <div className="img-holder">
                     <img alt={item.name} src={item.image_link}></img>
                   </div>
@@ -64,4 +49,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;

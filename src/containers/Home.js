@@ -6,16 +6,15 @@ import { fetchMakeup } from '../actions';
 import Cover from '../components/Cover';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ProductCard from '../components/ProductCard';
 
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMakeup());
-  }, []);
+  }, [dispatch]);
 
   const makeup = useSelector((state) => state.makeup);
-
-  console.log(makeup.makeup);
 
   return (
     <>
@@ -39,25 +38,7 @@ const Home = () => {
       <div className="items">
         {makeup.makeup &&
           makeup.makeup.map((item) => {
-            return (
-              <div className="card">
-                <Link to={`product/${item.id}`}>
-                  <div className="img-holder">
-                    <img alt={item.name} src={item.image_link}></img>
-                  </div>
-                  <h5 className="card-name">{item.name}</h5>
-                  <p>
-                    <strong>Brand</strong>: {item.brand}
-                  </p>
-                  <p>
-                    <strong>Category</strong>: {item.category}
-                  </p>
-                  <p>
-                    <strong>$ {item.price}</strong>
-                  </p>
-                </Link>
-              </div>
-            );
+            return <ProductCard item={item} />;
           })}
       </div>
     </>

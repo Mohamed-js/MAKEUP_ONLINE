@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Option from './Option';
 
 const CategoryFilter = (props) => {
   const filter = useSelector((state) => state.filter.category);
@@ -14,9 +15,7 @@ const CategoryFilter = (props) => {
         onChange={handleChange}
         value={filter}>
         {optionsAll.map((option) => (
-          <option key={Math.random()} value={option}>
-            {option}
-          </option>
+          <Option option={option} />
         ))}
       </select>
     </div>

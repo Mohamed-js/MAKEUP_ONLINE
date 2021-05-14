@@ -1,11 +1,12 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { fetchItemsByCategory, CHANGE_FILTER, CHANGE_BRAND } from '../actions';
 import DotLoader from 'react-spinners/DotLoader';
 import CategoryFilter from '../components/CategoryFilter';
 import BrandFilter from '../components/BrandFilter';
+import ProductCard from '../components/ProductCard';
 
 const Products = () => {
   const category = useParams(':category');
@@ -15,7 +16,7 @@ const Products = () => {
 
   useEffect(() => {
     dispatch(fetchItemsByCategory(category.category));
-  }, []);
+  }, [dispatch, category]);
 
   const makeup = useSelector((state) => state.makeup.category);
   let makeupToFilter;
@@ -86,28 +87,9 @@ const Products = () => {
           `}
           size={150}
         />
-
         {makeupToView &&
           makeupToView.map((item) => {
-            return (
-              <div className="card">
-                <Link to={`/product/${item.id}`}>
-                  <div className="img-holder">
-                    <img alt={item.name} src={item.image_link}></img>
-                  </div>
-                  <h5 className="card-name">{item.name}</h5>
-                  <p>
-                    <strong>Brand</strong>: {item.brand}
-                  </p>
-                  <p>
-                    <strong>Category</strong>: {item.category}
-                  </p>
-                  <p>
-                    <strong>$ {item.price}</strong>
-                  </p>
-                </Link>
-              </div>
-            );
+            return <ProductCard item={item} />;
           })}
       </div>
     </>

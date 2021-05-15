@@ -41,6 +41,8 @@ const Home = () => {
             return <ProductCard key={item.id} item={item} />;
           })}
       </div>
+      <br />
+      <br />
     </>
   );
 };

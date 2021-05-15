@@ -78,13 +78,17 @@ nav {
   flex-wrap: wrap;
   max-width: 900px;
   margin: 50px auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card {
   padding: 8px;
   flex-basis: 43%;
   transition: 0.5s;
+}
+
+.card h3 {
+  margin: 0;
 }
 
 .card:hover {
@@ -105,8 +109,7 @@ nav {
 }
 
 .card-name {
-  min-height: 50px;
-  margin-bottom: 5px;
+  margin: 0px;
 }
 
 .categories-btn {
@@ -123,7 +126,7 @@ nav {
 }
 
 .categories-btn a:hover {
-  animation: up-down 0.4s infinite alternate-reverse linear;
+  animation: up-down 0.2s infinite alternate-reverse linear;
 }
 
 .categories-btn svg {
@@ -148,7 +151,7 @@ nav {
   }
 
   100% {
-    top: -5px;
+    top: -2px;
   }
 }
 
@@ -166,7 +169,7 @@ nav {
 }
 
 .product-img-container {
-  height: 50vh;
+  height: 25vh;
   max-height: 300px;
 }
 
@@ -226,4 +229,19 @@ nav {
 
 .footer .logo {
   color: #f3f3f3;
+}
+
+@media screen and (min-width: 450px) {
+  .card {
+    flex-basis: 30%;
+  }
+  .card-name {
+    min-height: 30px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex-basis: 23%;
+  }
 }

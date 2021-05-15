@@ -1,7 +1,7 @@
 import { faBars, faSearch, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -32,15 +32,19 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faSearch} />
         </div>
       </nav>
-      <div className={'menu ' + status}>
-        <h2 className="menu-item" onClick={handleClick}>
-          <Link to="/">HOME</Link>
+      <div className={`menu ${status}`}>
+        <h2 className="menu-item">
+          <Link to="/" onClick={handleClick}>
+            HOME
+          </Link>
         </h2>
-        <h2 className="menu-item" onClick={handleClick}>
-          <Link to="/categories">CATEGORIES</Link>
+        <h2 className="menu-item">
+          <Link to="/categories" onClick={handleClick}>
+            CATEGORIES
+          </Link>
         </h2>
-        <h4 className="menu-toggle" onClick={toggle}>
-          <FontAwesomeIcon icon={faArrowUp} />
+        <h4 className="menu-toggle">
+          <FontAwesomeIcon onClick={toggle} icon={faArrowUp} />
         </h4>
       </div>
     </header>

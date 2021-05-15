@@ -1,35 +1,33 @@
 export const getCatOptions = (makeup) => {
+  let filtered;
   if (makeup) {
     const allOptions = [];
     makeup.forEach((item) => allOptions.push(item.category));
-    const filtered = allOptions.filter(Boolean).sort();
-    const filterCatOptions = new Set(filtered);
-    return filterCatOptions;
+    filtered = allOptions.filter(Boolean).sort();
   }
+  return new Set(filtered);
 };
 
 export const getBrandOptions = (makeup) => {
+  let filtered;
   if (makeup) {
     const allOptions = [];
     makeup.forEach((item) => allOptions.push(item.brand));
-    const filtered = allOptions.filter(Boolean).sort();
-    const filterBrandOptions = new Set(filtered);
-    return filterBrandOptions;
+    filtered = allOptions.filter(Boolean).sort();
   }
+  return new Set(filtered);
 };
 
 export const FilterCats = (filter, makeup) => {
   if (filter !== 'All') {
     return makeup.filter((item) => item.category === filter);
-  } else {
-    return makeup;
   }
+  return makeup;
 };
 
 export const FilterBrands = (brand, makeupToFilter) => {
   if (brand !== 'All') {
     return makeupToFilter.filter((item) => item.brand === brand);
-  } else {
-    return makeupToFilter;
   }
+  return makeupToFilter;
 };

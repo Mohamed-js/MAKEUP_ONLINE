@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Option = ({ option }) => {
-  return (
-    <option key={Math.random()} value={option}>
-      {option}
-    </option>
-  );
-};
+const Option = ({ option }) => (
+  <option key={Math.random()} value={option}>
+    {option}
+  </option>
+);
 
 Option.propTypes = {
   option: PropTypes.string,

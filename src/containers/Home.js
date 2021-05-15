@@ -1,11 +1,11 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchMakeup } from '../actions';
-import Cover from '../components/Cover';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fetchMakeup } from '../actions';
+import Cover from '../components/Cover';
 import ProductCard from '../components/ProductCard';
 
 const Home = () => {
@@ -26,7 +26,8 @@ const Home = () => {
         <Link to="/categories">
           SHOW CATEGORIES
           <span>
-            <FontAwesomeIcon icon={faArrowRight} />{' '}
+            <FontAwesomeIcon icon={faArrowRight} />
+            {' '}
           </span>
         </Link>
       </div>
@@ -36,10 +37,8 @@ const Home = () => {
         <h2>TOP PRODUCTS</h2>
       </div>
       <div className="items">
-        {makeup.makeup &&
-          makeup.makeup.map((item) => {
-            return <ProductCard key={item.id} item={item} />;
-          })}
+        {makeup.makeup
+          && makeup.makeup.map((item) => <ProductCard key={item.id} item={item} />)}
       </div>
       <br />
       <br />

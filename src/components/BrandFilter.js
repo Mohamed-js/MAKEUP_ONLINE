@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Option from './Option';
 import PropTypes from 'prop-types';
+import Option from './Option';
 
 const BrandFilter = (props) => {
   const filter = useSelector((state) => state.filter.brand);
@@ -9,14 +9,16 @@ const BrandFilter = (props) => {
   const optionsAll = ['All', ...options];
   return (
     <div className="filter-select">
+      {/* eslint-disable-next-line */}
       <label htmlFor="category">Brand</label>
       <select
         id="category"
         name="category"
         onChange={handleBrand}
-        value={filter}>
+        value={filter}
+      >
         {optionsAll.map((option) => (
-          <Option option={option} />
+          <Option key={option} option={option} />
         ))}
       </select>
     </div>
@@ -26,11 +28,11 @@ const BrandFilter = (props) => {
 export default BrandFilter;
 
 BrandFilter.propTypes = {
-  options: PropTypes.array,
+  options: PropTypes.instanceOf(Array),
   handleBrand: PropTypes.func,
 };
 
 BrandFilter.defaultProps = {
   options: ['All'],
-  handleBrand: () => 0,
+  handleBrand: 0,
 };

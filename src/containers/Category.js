@@ -1,13 +1,18 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchItemsByCategory, CHANGE_FILTER, CHANGE_BRAND } from '../actions';
 import DotLoader from 'react-spinners/DotLoader';
+import { fetchItemsByCategory, CHANGE_FILTER, CHANGE_BRAND } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 import BrandFilter from '../components/BrandFilter';
 import ProductCard from '../components/ProductCard';
-import { FilterBrands, FilterCats, getBrandOptions, getCatOptions } from '../Helpers';
+import {
+  FilterBrands,
+  FilterCats,
+  getBrandOptions,
+  getCatOptions,
+} from '../Helpers';
 
 const Products = () => {
   const category = useParams(':category');
@@ -20,11 +25,9 @@ const Products = () => {
   }, [dispatch, category]);
 
   const makeup = useSelector((state) => state.makeup.category);
-  let makeupToFilter;
-  let makeupToView;
 
-  makeupToFilter = FilterCats(filter, makeup);
-  makeupToView = FilterBrands(brand, makeupToFilter);
+  const makeupToFilter = FilterCats(filter, makeup);
+  const makeupToView = FilterBrands(brand, makeupToFilter);
 
   const handleBrand = (e) => {
     dispatch(CHANGE_BRAND(e.target.value));
@@ -41,7 +44,10 @@ const Products = () => {
       <div className="top-products">
         <hr />
         <br />
-        <h2>{category.category}s</h2>
+        <h2>
+          {category.category}
+          s
+        </h2>
       </div>
 
       {cats && (
@@ -61,10 +67,8 @@ const Products = () => {
           `}
           size={150}
         />
-        {makeupToView &&
-          makeupToView.map((item) => {
-            return <ProductCard item={item} />;
-          })}
+        {makeupToView
+          && makeupToView.map((item) => <ProductCard key={item} item={item} />)}
       </div>
     </>
   );

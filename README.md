@@ -48,9 +48,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Thanks to both parties involved in the development of this project.
-
-Design author credits: Mathew Njuguna | PatashuleKE | Behance designer.
+- Microverse
+- Notion
 
 ## 📝 License
 

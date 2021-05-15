@@ -1,6 +1,6 @@
 # Makeup Online
 
-> This project is a singel-page app built mainly with react. It is a catalogue for makeup. It's based on Makeup API, and it's responsove to all screens.
+> This project is a single-page app built mainly with react. It is a catalog for makeup. It's based on Makeup API, and it's responsive to all screens.
 
 > It does have 4 main pages. Home, categories, category products, and product show page.
 

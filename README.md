@@ -36,7 +36,7 @@
 
 - GitHub: [Mohammed Atef](https://github.com/Mohamed-js)
 - Twitter: [@MohammedAtef](https://twitter.com/Demovejetta)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-atef-032b6b1b0/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-js/)
 
 ## 🤝 Contributing
 

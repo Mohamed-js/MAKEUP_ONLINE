@@ -225,6 +225,9 @@ nav {
 
 .footer {
   background-color: darkslateblue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer .logo {

@@ -37,6 +37,7 @@
 - cd MAKEUP_ONLINE
 - npm install
 - npm test
+- press a to run all tests
 ```
 
 ## Authors

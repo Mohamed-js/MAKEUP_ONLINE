@@ -45,7 +45,9 @@ const Products = () => {
         <hr />
         <br />
         <h2>
-          {category.category}
+          {
+        category.category
+        }
           s
         </h2>
       </div>
@@ -68,7 +70,7 @@ const Products = () => {
           size={150}
         />
         {makeupToView
-          && makeupToView.map((item) => <ProductCard key={item} item={item} />)}
+          && makeupToView.map((item) => <ProductCard key={item.id} item={item} />)}
       </div>
     </>
   );

@@ -5,7 +5,7 @@ export const getCatOptions = (makeup) => {
     makeup.forEach((item) => allOptions.push(item.category));
     filtered = allOptions.filter(Boolean).sort();
   }
-  return new Set(filtered);
+  return Array.from(new Set(filtered));
 };
 
 export const getBrandOptions = (makeup) => {
@@ -15,7 +15,7 @@ export const getBrandOptions = (makeup) => {
     makeup.forEach((item) => allOptions.push(item.brand));
     filtered = allOptions.filter(Boolean).sort();
   }
-  return new Set(filtered);
+  return Array.from(new Set(filtered));
 };
 
 export const FilterCats = (filter, makeup) => {

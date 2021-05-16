@@ -1,4 +1,4 @@
-# Makeup Online
+# Makeup Online - Microverse Capstone Project
 
 > This project is a single-page app built mainly with React. It is a catalog for makeup. It's based on Makeup API, and it's responsive to all screens.
 
@@ -17,6 +17,10 @@
 - CSS
 - ES6
 
+## Live Demo
+
+[Live Demo Link](https://makeup-online.herokuapp.com/)
+
 ## Usage
 
 ```
@@ -26,9 +30,14 @@
 - npm start
 ```
 
-## Live Demo
+## Testing
 
-[Live Demo Link](https://makeup-online.herokuapp.com/)
+```
+- git clone "https://github.com/Mohamed-js/MAKEUP_ONLINE.git"
+- cd MAKEUP_ONLINE
+- npm install
+- npm test
+```
 
 ## Authors
 

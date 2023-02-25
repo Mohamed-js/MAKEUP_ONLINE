@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MAKEUP_ONLINE/static/css/main.aaa9efd6.chunk.css",
+    "main.js": "/MAKEUP_ONLINE/static/js/main.af618f0f.chunk.js",
+    "main.js.map": "/MAKEUP_ONLINE/static/js/main.af618f0f.chunk.js.map",
+    "runtime-main.js": "/MAKEUP_ONLINE/static/js/runtime-main.14afc958.js",
+    "runtime-main.js.map": "/MAKEUP_ONLINE/static/js/runtime-main.14afc958.js.map",
+    "static/js/2.b4156872.chunk.js": "/MAKEUP_ONLINE/static/js/2.b4156872.chunk.js",
+    "static/js/2.b4156872.chunk.js.map": "/MAKEUP_ONLINE/static/js/2.b4156872.chunk.js.map",
+    "index.html": "/MAKEUP_ONLINE/index.html",
+    "static/css/main.aaa9efd6.chunk.css.map": "/MAKEUP_ONLINE/static/css/main.aaa9efd6.chunk.css.map",
+    "static/js/2.b4156872.chunk.js.LICENSE.txt": "/MAKEUP_ONLINE/static/js/2.b4156872.chunk.js.LICENSE.txt",
+    "static/media/1.00141963.png": "/MAKEUP_ONLINE/static/media/1.00141963.png",
+    "static/media/2.a4899794.png": "/MAKEUP_ONLINE/static/media/2.a4899794.png",
+    "static/media/3.2400c02a.png": "/MAKEUP_ONLINE/static/media/3.2400c02a.png",
+    "static/media/4.16ba0907.png": "/MAKEUP_ONLINE/static/media/4.16ba0907.png",
+    "static/media/5.ee1c89f9.png": "/MAKEUP_ONLINE/static/media/5.ee1c89f9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14afc958.js",
+    "static/js/2.b4156872.chunk.js",
+    "static/css/main.aaa9efd6.chunk.css",
+    "static/js/main.af618f0f.chunk.js"
+  ]
+}
